@@ -1,0 +1,1704 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.19.0213.2333                               -->
+<workbook source-build='2019.1.0 (20191.19.0213.2333)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <StorytellingArrowOnlyNavigator />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='data_umkm_jenis_usaha_tahun_2021' inline='true' name='federated.0o6bvr01gjz46o182xel50tv7y9k' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='data_umkm_jenis_usaha_tahun_2021' name='textscan.0j606ld0qrgc0712qbprk0b6t11y'>
+            <connection class='textscan' directory='C:/Users/TOSHIBA.TOSHIBA-PC/Desktop/Jupyter Notebook/PELAJAR_Solo Leveling/Solo Leveling_DM/UMKM Jenis Usaha' filename='data_umkm_jenis_usaha_tahun_2021.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0j606ld0qrgc0712qbprk0b6t11y' name='data_umkm_jenis_usaha_tahun_2021.csv' table='[data_umkm_jenis_usaha_tahun_2021#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='id_ID'>
+            <column datatype='string' name='kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun' ordinal='0' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[data_umkm_jenis_usaha_tahun_2021.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rp&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;id_ID&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]</local-name>
+            <parent-name>[data_umkm_jenis_usaha_tahun_2021.csv]</parent-name>
+            <remote-alias>kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Nama Provinsi' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 2]' role='dimension' type='nominal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.0o6bvr01gjz46o182xel50tv7y9k].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 2 ) )' />
+      </column>
+      <column caption='Nama Kabupaten Kota' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 4]' role='dimension' type='nominal' user:SplitFieldIndex='4' user:SplitFieldOrigin='[federated.0o6bvr01gjz46o182xel50tv7y9k].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 4 ) )' />
+      </column>
+      <column caption='Jenis Usaha' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5]' role='dimension' type='nominal' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.0o6bvr01gjz46o182xel50tv7y9k].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 5 ) )' />
+      </column>
+      <column caption='Jumlah UMKM' datatype='integer' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6]' role='measure' type='quantitative' user:SplitFieldIndex='6' user:SplitFieldOrigin='[federated.0o6bvr01gjz46o182xel50tv7y9k].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='INT(TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 6 ) ))' />
+      </column>
+      <column caption='Tahun' datatype='date' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 8]' role='dimension' type='ordinal' user:SplitFieldIndex='8' user:SplitFieldOrigin='[federated.0o6bvr01gjz46o182xel50tv7y9k].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyy&quot;, TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 8 ) ) )) ' />
+      </column>
+      <column datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]' role='dimension' type='nominal' />
+      <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5]' derivation='None' name='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.543086' measure-ordering='alphabetic' measure-percentage='0.456914' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;JASA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;AGRIBISNIS&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CRAFT&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;MEBEL&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;KONVEKSI&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;DEKORASI&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;AKSESORIS&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;FASHION&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;MINUMAN&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;OBAT-OBATAN&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;KULINER&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;INDUSTRI&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;BATIK&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>%all%</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;MAKANAN&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;BORDIR&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+    <datasource caption='data_umkm_bentuk_usaha_tahun_2021' inline='true' name='federated.0y6xiyy1ryn6xd1a0rsad0ao5eda' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='data_umkm_bentuk_usaha_tahun_2021' name='textscan.0wx39yu12qdg8z19d4vkc0gyv5iz'>
+            <connection class='textscan' directory='C:/Users/TOSHIBA.TOSHIBA-PC/Desktop/Jupyter Notebook/PELAJAR_Solo Leveling/Solo Leveling_DM/UMKM bentuk Usaha' filename='data_umkm_bentuk_usaha_tahun_2021.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0wx39yu12qdg8z19d4vkc0gyv5iz' name='data_umkm_bentuk_usaha_tahun_2021.csv' table='[data_umkm_bentuk_usaha_tahun_2021#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='id_ID'>
+            <column datatype='string' name='kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun' ordinal='0' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[data_umkm_bentuk_usaha_tahun_2021.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rp&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;id_ID&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]</local-name>
+            <parent-name>[data_umkm_bentuk_usaha_tahun_2021.csv]</parent-name>
+            <remote-alias>kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Nama Kabupaten Kota' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 4]' role='dimension' type='nominal' user:SplitFieldIndex='4' user:SplitFieldOrigin='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 4 ) )' />
+      </column>
+      <column caption='Bentuk Usaha' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 5]' role='dimension' type='nominal' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 5 ) )' />
+      </column>
+      <column caption='Jumlah UMKM' datatype='integer' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 6]' role='measure' type='quantitative' user:SplitFieldIndex='6' user:SplitFieldOrigin='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='INT(TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 6 ) ))' />
+      </column>
+      <column caption='Tahun' datatype='date' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 8]' role='dimension' type='ordinal' user:SplitFieldIndex='8' user:SplitFieldOrigin='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyy&quot;, TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 8 ) ) )) ' />
+      </column>
+      <column datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.523918' measure-ordering='alphabetic' measure-percentage='0.476082' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+    <datasource caption='data_umkm_proporsi_kredit' inline='true' name='federated.0rg6thb1fnigwi16ckv290cggoke' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='data_umkm_proporsi_kredit' name='textscan.0x1wb7t0l9bhat19lmtdf1c65oj0'>
+            <connection class='textscan' directory='C:/Users/TOSHIBA.TOSHIBA-PC/Desktop/Jupyter Notebook/PELAJAR_Solo Leveling/Solo Leveling_DM/UMKM Proporsi Kredit' filename='data_umkm_proporsi_kredit.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0x1wb7t0l9bhat19lmtdf1c65oj0' name='data_umkm_proporsi_kredit.csv' table='[data_umkm_proporsi_kredit#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='id_ID'>
+            <column datatype='string' name='id,jumlah_proporsi,satuan,tahun' ordinal='0' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[data_umkm_proporsi_kredit.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rp&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;id_ID&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id,jumlah_proporsi,satuan,tahun</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id,jumlah_proporsi,satuan,tahun]</local-name>
+            <parent-name>[data_umkm_proporsi_kredit.csv]</parent-name>
+            <remote-alias>id,jumlah_proporsi,satuan,tahun</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Jumlah Proporsi' datatype='real' datatype-customized='true' name='[id,jumlah_proporsi,satuan,tahun - Split 2]' role='measure' type='quantitative' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.0rg6thb1fnigwi16ckv290cggoke].[id,jumlah_proporsi,satuan,tahun]'>
+        <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [id,jumlah_proporsi,satuan,tahun], &quot;,&quot;, 2 ) ))' />
+      </column>
+      <column caption='Tahun' datatype='date' datatype-customized='true' name='[id,jumlah_proporsi,satuan,tahun - Split 4]' role='dimension' type='ordinal' user:SplitFieldIndex='4' user:SplitFieldOrigin='[federated.0rg6thb1fnigwi16ckv290cggoke].[id,jumlah_proporsi,satuan,tahun]'>
+        <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyy&quot;, TRIM( SPLIT( [id,jumlah_proporsi,satuan,tahun], &quot;,&quot;, 4 ) ) )) ' />
+      </column>
+      <column datatype='string' hidden='true' name='[id,jumlah_proporsi,satuan,tahun]' role='dimension' type='nominal' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[id,jumlah_proporsi,satuan,tahun - Split 4]' derivation='Year-Trunc' name='[tyr:id,jumlah_proporsi,satuan,tahun - Split 4:ok]' pivot='key' type='ordinal' />
+      <group caption='Set 1' name='[Set 1]' name-style='unqualified' user:ui-builder='lasso-group'>
+        <groupfilter function='member' level='[tyr:id,jumlah_proporsi,satuan,tahun - Split 4:ok]' member='#2021-01-01 00:00:00#' />
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.332574' group-percentage='0.284738' measure-ordering='alphabetic' measure-percentage='0.382688' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+    </datasource>
+    <datasource caption='data_umkm_kategori_usaha_tahun_2022' inline='true' name='federated.19l12im02ax9h714izz0v10hbmb6' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='data_umkm_kategori_usaha_tahun_2022' name='textscan.1qw9aiw0mksxq61cxrh8j1pkmh5b'>
+            <connection class='textscan' directory='C:/Users/TOSHIBA.TOSHIBA-PC/Desktop/Jupyter Notebook/PELAJAR_Solo Leveling/Solo Leveling_DM/UMKM Kabupaten dan Kota Kategori' filename='data_umkm_kategori_usaha_tahun_2022.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1qw9aiw0mksxq61cxrh8j1pkmh5b' name='data_umkm_kategori_usaha_tahun_2022.csv' table='[data_umkm_kategori_usaha_tahun_2022#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='id_ID'>
+            <column datatype='string' name='kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun' ordinal='0' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[data_umkm_kategori_usaha_tahun_2022.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rp&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;id_ID&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]</local-name>
+            <parent-name>[data_umkm_kategori_usaha_tahun_2022.csv]</parent-name>
+            <remote-alias>kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Nama Kabupaten Kota' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 4]' role='dimension' type='nominal' user:SplitFieldIndex='4' user:SplitFieldOrigin='[federated.19l12im02ax9h714izz0v10hbmb6].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 4 ) )' />
+      </column>
+      <column caption='Kategori Usaha' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5]' role='dimension' type='nominal' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.19l12im02ax9h714izz0v10hbmb6].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 5 ) )' />
+      </column>
+      <column caption='Jumlah UMKM' datatype='integer' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6]' role='measure' type='quantitative' user:SplitFieldIndex='6' user:SplitFieldOrigin='[federated.19l12im02ax9h714izz0v10hbmb6].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='INT(TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 6 ) ))' />
+      </column>
+      <column caption='Tahun' datatype='date' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 8]' role='dimension' type='ordinal' user:SplitFieldIndex='8' user:SplitFieldOrigin='[federated.19l12im02ax9h714izz0v10hbmb6].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyy&quot;, TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 8 ) ) )) ' />
+      </column>
+      <column datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]' role='dimension' type='nominal' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5]' derivation='None' name='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.523918' measure-ordering='alphabetic' measure-percentage='0.476082' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;AKSESORIS&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;FASHION&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;CRAFT&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;MAKANAN&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;KONVEKSI&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;MINUMAN&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;BORDIR&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;JASA/LAINNYA&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;BATIK&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>%all%</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;KULINER&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+    </datasource>
+    <datasource caption='data_umkm_kabupaten_kota_tahun_2022' inline='true' name='federated.0dnt1791cnqrho15z1lyl1yolf6e' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='data_umkm_kabupaten_kota_tahun_2022' name='textscan.0pz3qja0mubo9v16uh6sd1mu9fxe'>
+            <connection class='textscan' directory='C:/Users/TOSHIBA.TOSHIBA-PC/Desktop/Jupyter Notebook/PELAJAR_Solo Leveling/Solo Leveling_DM/UMKM Kabupaten Kota' filename='data_umkm_kabupaten_kota_tahun_2022.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0pz3qja0mubo9v16uh6sd1mu9fxe' name='data_umkm_kabupaten_kota_tahun_2022.csv' table='[data_umkm_kabupaten_kota_tahun_2022#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='id_ID'>
+            <column datatype='string' name='kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun' ordinal='0' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[data_umkm_kabupaten_kota_tahun_2022.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rp&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;id_ID&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]</local-name>
+            <parent-name>[data_umkm_kabupaten_kota_tahun_2022.csv]</parent-name>
+            <remote-alias>kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 1' datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun], &quot;,&quot;, 1 ) )' />
+      </column>
+      <column caption='kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 2' datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 2]' role='dimension' type='nominal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun], &quot;,&quot;, 2 ) )' />
+      </column>
+      <column caption='kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 3' datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 3]' role='dimension' type='nominal' user:SplitFieldIndex='3' user:SplitFieldOrigin='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun], &quot;,&quot;, 3 ) )' />
+      </column>
+      <column caption='Nama Kabupaten Kota' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 4]' role='dimension' type='nominal' user:SplitFieldIndex='4' user:SplitFieldOrigin='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun], &quot;,&quot;, 4 ) )' />
+      </column>
+      <column caption='Jumlah UMKM' datatype='integer' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 5]' role='measure' type='quantitative' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='INT(TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun], &quot;,&quot;, 5 ) ))' />
+      </column>
+      <column caption='kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 6' datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 6]' role='dimension' type='nominal' user:SplitFieldIndex='6' user:SplitFieldOrigin='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun], &quot;,&quot;, 6 ) )' />
+      </column>
+      <column caption='Tahun' datatype='date' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 7]' role='dimension' type='ordinal' user:SplitFieldIndex='7' user:SplitFieldOrigin='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]'>
+        <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyy&quot;, TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun], &quot;,&quot;, 7 ) ) )) ' />
+      </column>
+      <column datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]' role='dimension' type='nominal' />
+      <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 4]' derivation='None' name='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 4:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.501002' measure-ordering='alphabetic' measure-percentage='0.498998' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 4:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;KABUPATEN INDRAMAYU&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;KABUPATEN BANDUNG&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;KOTA BEKASI&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;KABUPATEN CIAMIS&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;KOTA DEPOK&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;KABUPATEN PANGANDARAN&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;KABUPATEN KARAWANG&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;KABUPATEN CIANJUR&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;KOTA SUKABUMI&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;KOTA BANDUNG&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;KABUPATEN BANDUNG BARAT&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;KOTA BOGOR&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;KABUPATEN SUMEDANG&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;KABUPATEN CIREBON&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;KOTA TASIKMALAYA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;KABUPATEN PURWAKARTA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;KABUPATEN SUBANG&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;KABUPATEN TASIKMALAYA&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;KOTA BANJAR&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;KABUPATEN KUNINGAN&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;KABUPATEN GARUT&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;KABUPATEN BEKASI&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;KOTA CIMAHI&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;KABUPATEN SUKABUMI&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;KABUPATEN MAJALENGKA&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;KABUPATEN BOGOR&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;KOTA CIREBON&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Bentuk Usaha'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Swis721 BT' fontsize='12'>Bentuk Usaha </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data_umkm_bentuk_usaha_tahun_2021' name='federated.0y6xiyy1ryn6xd1a0rsad0ao5eda' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0y6xiyy1ryn6xd1a0rsad0ao5eda'>
+            <column caption='Bentuk Usaha' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 5]' role='dimension' type='nominal' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 5 ) )' />
+            </column>
+            <column caption='Jumlah UMKM' datatype='integer' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 6]' role='measure' type='quantitative' user:SplitFieldIndex='6' user:SplitFieldOrigin='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='INT(TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 6 ) ))' />
+            </column>
+            <column datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]' role='dimension' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 5]' derivation='None' name='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' pivot='key' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 6]' derivation='Sum' name='[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' />
+              <wedge-size column='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' />
+              <size column='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D40D510F-F453-460F-9ABD-413B5C4F673E}' />
+    </worksheet>
+    <worksheet name='Bentuk Usaha (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Swis721 BT'>Bentuk Usaha</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data_umkm_bentuk_usaha_tahun_2021' name='federated.0y6xiyy1ryn6xd1a0rsad0ao5eda' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0y6xiyy1ryn6xd1a0rsad0ao5eda'>
+            <column caption='Bentuk Usaha' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 5]' role='dimension' type='nominal' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 5 ) )' />
+            </column>
+            <column caption='Jumlah UMKM' datatype='integer' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 6]' role='measure' type='quantitative' user:SplitFieldIndex='6' user:SplitFieldOrigin='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='INT(TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 6 ) ))' />
+            </column>
+            <column caption='Tahun' datatype='date' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 8]' role='dimension' type='ordinal' user:SplitFieldIndex='8' user:SplitFieldOrigin='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyy&quot;, TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 8 ) ) )) ' />
+            </column>
+            <column datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun]' role='dimension' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 5]' derivation='None' name='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' pivot='key' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 6]' derivation='Sum' name='[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 8]' derivation='Year' name='[yr:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 8:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' />
+              <wedge-size column='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' />
+              <size column='[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0y6xiyy1ryn6xd1a0rsad0ao5eda].[yr:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,bentuk_usaha,jumlah_umkm,satuan,tahun - Split 8:ok]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{EAF89CE8-0928-4B70-9A38-0D413792E55D}' />
+    </worksheet>
+    <worksheet name='Jenis Usaha'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Swis721 BT' fontsize='12'>Jenis Usaha dan Jumlah UMKM nya</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data_umkm_jenis_usaha_tahun_2021' name='federated.0o6bvr01gjz46o182xel50tv7y9k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0o6bvr01gjz46o182xel50tv7y9k'>
+            <column caption='Jenis Usaha' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5]' role='dimension' type='nominal' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.0o6bvr01gjz46o182xel50tv7y9k].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 5 ) )' />
+            </column>
+            <column caption='Jumlah UMKM' datatype='integer' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6]' role='measure' type='quantitative' user:SplitFieldIndex='6' user:SplitFieldOrigin='[federated.0o6bvr01gjz46o182xel50tv7y9k].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='INT(TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 6 ) ))' />
+            </column>
+            <column datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]' role='dimension' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5]' derivation='None' name='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' pivot='key' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6]' derivation='Sum' name='[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0o6bvr01gjz46o182xel50tv7y9k].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0o6bvr01gjz46o182xel50tv7y9k].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0o6bvr01gjz46o182xel50tv7y9k].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]</rows>
+        <cols>[federated.0o6bvr01gjz46o182xel50tv7y9k].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]</cols>
+      </table>
+      <simple-id uuid='{AE238706-C7DF-4E90-99DD-C304AD099259}' />
+    </worksheet>
+    <worksheet name='Jenis Usaha (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Swis721 BT'>Jenis Usaha</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data_umkm_jenis_usaha_tahun_2021' name='federated.0o6bvr01gjz46o182xel50tv7y9k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0o6bvr01gjz46o182xel50tv7y9k'>
+            <column caption='Jenis Usaha' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5]' role='dimension' type='nominal' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.0o6bvr01gjz46o182xel50tv7y9k].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 5 ) )' />
+            </column>
+            <column caption='Jumlah UMKM' datatype='integer' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6]' role='measure' type='quantitative' user:SplitFieldIndex='6' user:SplitFieldOrigin='[federated.0o6bvr01gjz46o182xel50tv7y9k].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='INT(TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 6 ) ))' />
+            </column>
+            <column caption='Tahun' datatype='date' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 8]' role='dimension' type='ordinal' user:SplitFieldIndex='8' user:SplitFieldOrigin='[federated.0o6bvr01gjz46o182xel50tv7y9k].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyy&quot;, TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 8 ) ) )) ' />
+            </column>
+            <column datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun]' role='dimension' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5]' derivation='None' name='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' pivot='key' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6]' derivation='Sum' name='[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 8]' derivation='Year' name='[yr:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 8:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0o6bvr01gjz46o182xel50tv7y9k].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0o6bvr01gjz46o182xel50tv7y9k].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='confidence' id='refline0' label-type='none' paired-distribution-id='refline2' probability='95' scope='per-table' show-lines='both' symmetric='false' value-column='[federated.0o6bvr01gjz46o182xel50tv7y9k].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' z-order='2' />
+            <reference-line axis-column='[federated.0o6bvr01gjz46o182xel50tv7y9k].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='automatic' probability='95' scope='per-table' value-column='[federated.0o6bvr01gjz46o182xel50tv7y9k].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' z-order='1' />
+            <reference-line axis-column='[federated.0o6bvr01gjz46o182xel50tv7y9k].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' enable-instant-analytics='true' formula='average' id='refline2' label-type='automatic' paired-distribution-id='refline0' probability='95' scope='per-table' value-column='[federated.0o6bvr01gjz46o182xel50tv7y9k].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' z-order='3' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0o6bvr01gjz46o182xel50tv7y9k].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]</rows>
+        <cols>([federated.0o6bvr01gjz46o182xel50tv7y9k].[yr:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 8:ok] * [federated.0o6bvr01gjz46o182xel50tv7y9k].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jenis_usaha,jumlah_umkm,satuan,tahun - Split 6:qk])</cols>
+      </table>
+      <simple-id uuid='{2538EF5F-61AF-416F-B3A3-900B5FB5F25E}' />
+    </worksheet>
+    <worksheet name='Jumlah Proporsi'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Swis721 BT' fontsize='12'>Proporsi Kredit</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data_umkm_proporsi_kredit' name='federated.0rg6thb1fnigwi16ckv290cggoke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rg6thb1fnigwi16ckv290cggoke'>
+            <column-instance column='[id,jumlah_proporsi,satuan,tahun - Split 2]' derivation='Sum' forecast-column-base='[sum:id,jumlah_proporsi,satuan,tahun - Split 2:qk]' forecast-column-type='forecast-value' name='[fVal:sum:id,jumlah_proporsi,satuan,tahun - Split 2:qk]' pivot='key' type='quantitative' />
+            <column caption='Jumlah Proporsi' datatype='real' datatype-customized='true' name='[id,jumlah_proporsi,satuan,tahun - Split 2]' role='measure' type='quantitative' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.0rg6thb1fnigwi16ckv290cggoke].[id,jumlah_proporsi,satuan,tahun]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [id,jumlah_proporsi,satuan,tahun], &quot;,&quot;, 2 ) ))' />
+            </column>
+            <column caption='Tahun' datatype='date' datatype-customized='true' name='[id,jumlah_proporsi,satuan,tahun - Split 4]' role='dimension' type='ordinal' user:SplitFieldIndex='4' user:SplitFieldOrigin='[federated.0rg6thb1fnigwi16ckv290cggoke].[id,jumlah_proporsi,satuan,tahun]'>
+              <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyy&quot;, TRIM( SPLIT( [id,jumlah_proporsi,satuan,tahun], &quot;,&quot;, 4 ) ) )) ' />
+            </column>
+            <column datatype='string' hidden='true' name='[id,jumlah_proporsi,satuan,tahun]' role='dimension' type='nominal' />
+            <column-instance column='[id,jumlah_proporsi,satuan,tahun - Split 2]' derivation='Sum' name='[sum:id,jumlah_proporsi,satuan,tahun - Split 2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[id,jumlah_proporsi,satuan,tahun - Split 4]' derivation='Year' name='[yr:id,jumlah_proporsi,satuan,tahun - Split 4:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.0rg6thb1fnigwi16ckv290cggoke].[yr:id,jumlah_proporsi,satuan,tahun - Split 4:ok]' value='10' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0rg6thb1fnigwi16ckv290cggoke].[fVal:sum:id,jumlah_proporsi,satuan,tahun - Split 2:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.0rg6thb1fnigwi16ckv290cggoke].[fVal:sum:id,jumlah_proporsi,satuan,tahun - Split 2:qk]' palette='purple_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0rg6thb1fnigwi16ckv290cggoke].[fVal:sum:id,jumlah_proporsi,satuan,tahun - Split 2:qk]' />
+              <text column='[federated.0rg6thb1fnigwi16ckv290cggoke].[fVal:sum:id,jumlah_proporsi,satuan,tahun - Split 2:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.0rg6thb1fnigwi16ckv290cggoke].[yr:id,jumlah_proporsi,satuan,tahun - Split 4:ok]</cols>
+        <forecast-specification auto-forecast-agg='false' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' forecast-agg='Year-Trunc' ignore-last='1' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{DFFE4EE3-9699-487B-8DDD-92BF7B8B5776}' />
+    </worksheet>
+    <worksheet name='Kategori Usaha'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Swis721 BT' fontsize='12'>Kategori Usaha</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data_umkm_kategori_usaha_tahun_2022' name='federated.19l12im02ax9h714izz0v10hbmb6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.19l12im02ax9h714izz0v10hbmb6'>
+            <column caption='Kategori Usaha' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5]' role='dimension' type='nominal' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.19l12im02ax9h714izz0v10hbmb6].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 5 ) )' />
+            </column>
+            <column caption='Jumlah UMKM' datatype='integer' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6]' role='measure' type='quantitative' user:SplitFieldIndex='6' user:SplitFieldOrigin='[federated.19l12im02ax9h714izz0v10hbmb6].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='INT(TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 6 ) ))' />
+            </column>
+            <column datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]' role='dimension' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5]' derivation='None' name='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' pivot='key' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6]' derivation='Sum' name='[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.19l12im02ax9h714izz0v10hbmb6].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' included-values='in-range'>
+            <min>11332</min>
+            <max>12198975</max>
+          </filter>
+          <slices>
+            <column>[federated.19l12im02ax9h714izz0v10hbmb6].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refband'>
+            <format attr='reverse-palette' id='refline1' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.19l12im02ax9h714izz0v10hbmb6].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.19l12im02ax9h714izz0v10hbmb6].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]</rows>
+        <cols>[federated.19l12im02ax9h714izz0v10hbmb6].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]</cols>
+      </table>
+      <simple-id uuid='{E1E0780B-999A-4E50-9540-8568CB29CD66}' />
+    </worksheet>
+    <worksheet name='Kategori Usaha (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Swis721 BT'>Kategori Usaha</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data_umkm_kategori_usaha_tahun_2022' name='federated.19l12im02ax9h714izz0v10hbmb6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.19l12im02ax9h714izz0v10hbmb6'>
+            <column caption='Kategori Usaha' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5]' role='dimension' type='nominal' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.19l12im02ax9h714izz0v10hbmb6].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 5 ) )' />
+            </column>
+            <column caption='Jumlah UMKM' datatype='integer' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6]' role='measure' type='quantitative' user:SplitFieldIndex='6' user:SplitFieldOrigin='[federated.19l12im02ax9h714izz0v10hbmb6].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='INT(TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 6 ) ))' />
+            </column>
+            <column caption='Tahun' datatype='date' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 8]' role='dimension' type='ordinal' user:SplitFieldIndex='8' user:SplitFieldOrigin='[federated.19l12im02ax9h714izz0v10hbmb6].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyy&quot;, TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 8 ) ) )) ' />
+            </column>
+            <column datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]' role='dimension' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5]' derivation='None' name='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' pivot='key' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6]' derivation='Sum' name='[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 8]' derivation='Year' name='[yr:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 8:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refband'>
+            <format attr='reverse-palette' id='refline1' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.19l12im02ax9h714izz0v10hbmb6].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.19l12im02ax9h714izz0v10hbmb6].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='quantiles' id='refline0' label-type='none' scope='per-pane' symmetric='true' tile-count='4' value-column='[federated.19l12im02ax9h714izz0v10hbmb6].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' z-order='1' />
+            <reference-line axis-column='[federated.19l12im02ax9h714izz0v10hbmb6].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='automatic' probability='95' scope='per-pane' value-column='[federated.19l12im02ax9h714izz0v10hbmb6].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' z-order='2' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.19l12im02ax9h714izz0v10hbmb6].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]</rows>
+        <cols>([federated.19l12im02ax9h714izz0v10hbmb6].[yr:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 8:ok] * [federated.19l12im02ax9h714izz0v10hbmb6].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk])</cols>
+      </table>
+      <simple-id uuid='{48C4D6F0-CE08-42BC-B5DB-DDE89FF6365C}' />
+    </worksheet>
+    <worksheet name='Nama Kabupaten Kota'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Swis721 BT' fontsize='12'>Nama Kabupaten Kota dan Jumlah UMKM nya</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data_umkm_kabupaten_kota_tahun_2022' name='federated.0dnt1791cnqrho15z1lyl1yolf6e' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dnt1791cnqrho15z1lyl1yolf6e'>
+            <column caption='Nama Kabupaten Kota' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 4]' role='dimension' type='nominal' user:SplitFieldIndex='4' user:SplitFieldOrigin='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun], &quot;,&quot;, 4 ) )' />
+            </column>
+            <column caption='Jumlah UMKM' datatype='integer' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 5]' role='measure' type='quantitative' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='INT(TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun], &quot;,&quot;, 5 ) ))' />
+            </column>
+            <column caption='Tahun' datatype='date' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 7]' role='dimension' type='ordinal' user:SplitFieldIndex='7' user:SplitFieldOrigin='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyy&quot;, TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun], &quot;,&quot;, 7 ) ) )) ' />
+            </column>
+            <column datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun]' role='dimension' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 4]' derivation='None' name='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 4:nk]' pivot='key' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 5]' derivation='Sum' name='[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 5:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 7]' derivation='Year-Trunc' name='[tyr:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 7:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 4:nk]' direction='DESC' using='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 5:qk]'>
+            <groupfilter function='member' level='[tyr:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 7:ok]' member='#2016-01-01 00:00:00#' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </computed-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 5:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 5:qk]' />
+              <color column='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 4:nk]' />
+              <text column='[federated.0dnt1791cnqrho15z1lyl1yolf6e].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,jumlah_umkm,satuan,tahun - Split 4:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{6032D698-983C-4683-AC6E-E14E90FB02C5}' />
+    </worksheet>
+    <worksheet name='Tahun'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='2' fontcolor='#000000' fontname='Swis721 BT' fontsize='12'>Pertumbuhan Kategori Usaha setiap Tahunnya</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data_umkm_kategori_usaha_tahun_2022' name='federated.19l12im02ax9h714izz0v10hbmb6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.19l12im02ax9h714izz0v10hbmb6'>
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6]' derivation='Sum' forecast-column-base='[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' forecast-column-type='forecast-value' name='[fVal:sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' pivot='key' type='quantitative' />
+            <column caption='Kategori Usaha' datatype='string' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5]' role='dimension' type='nominal' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.19l12im02ax9h714izz0v10hbmb6].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 5 ) )' />
+            </column>
+            <column caption='Jumlah UMKM' datatype='integer' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6]' role='measure' type='quantitative' user:SplitFieldIndex='6' user:SplitFieldOrigin='[federated.19l12im02ax9h714izz0v10hbmb6].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='INT(TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 6 ) ))' />
+            </column>
+            <column caption='Tahun' datatype='date' datatype-customized='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 8]' role='dimension' type='ordinal' user:SplitFieldIndex='8' user:SplitFieldOrigin='[federated.19l12im02ax9h714izz0v10hbmb6].[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]'>
+              <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyy&quot;, TRIM( SPLIT( [kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun], &quot;,&quot;, 8 ) ) )) ' />
+            </column>
+            <column datatype='string' hidden='true' name='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun]' role='dimension' type='nominal' />
+            <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5]' derivation='None' name='[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' pivot='key' type='nominal' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6]' derivation='Sum' name='[sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 8]' derivation='Year' name='[yr:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 8:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.19l12im02ax9h714izz0v10hbmb6].[none:Forecast Indicator:nk]' value='10' />
+            <format attr='height-header' value='17' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.19l12im02ax9h714izz0v10hbmb6].[none:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 5:nk]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='false' y-axis='true' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.19l12im02ax9h714izz0v10hbmb6].[fVal:sum:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 6:qk]</rows>
+        <cols>([federated.19l12im02ax9h714izz0v10hbmb6].[none:Forecast Indicator:nk] / [federated.19l12im02ax9h714izz0v10hbmb6].[yr:kode_provinsi,nama_provinsi,kode_kabupaten_kota,nama_kabupaten_kota,kategori_usaha,jumlah_umkm,satuan,tahun - Split 8:ok])</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{975A9B28-6C13-4BA3-A75D-4CAE2F6DE4F8}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Swis721 WGL4 BT'>UMKM digital adalah Kunci Pemulihan Ekonomi Nasional</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97832' id='12' param='vert' type='layout-flow' w='98828' x='586' y='1084'>
+            <zone h='5420' id='13' type='title' w='98828' x='586' y='1084'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92412' id='10' type='layout-basic' w='98828' x='586' y='6504'>
+              <zone h='32540' id='6' name='Kategori Usaha' w='73452' x='25962' y='66376'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='32540' id='8' name='Bentuk Usaha' w='25376' x='586' y='66376'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='42269' id='5' name='Nama Kabupaten Kota' w='49389' x='586' y='24107'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='17603' id='7' name='Jumlah Proporsi' w='98828' x='586' y='6504'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='42269' id='9' name='Tahun' w='49439' x='49975' y='24107'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='4739' id='22' type='dashboard-object' w='3013' x='94979' y='948'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{49BC251F-07F0-41DC-8166-9A8EF7E39117}&quot;'>
+            <button-visual-state />
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Swis721 WGL4 BT'>UMKM digital adalah Kunci Pemulihan Ekonomi Nasional</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1350' minheight='1350' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='57' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97472' id='58' param='vert' type='layout-flow' w='98662' x='669' y='1264'>
+                <zone h='6319' id='13' type='title' w='98662' x='669' y='1264'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4739' id='22' type='dashboard-object' w='3013' x='94979' y='948'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{49BC251F-07F0-41DC-8166-9A8EF7E39117}&quot;'>
+                    <button-visual-state />
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='131' h='17365' id='7' is-fixed='true' name='Jumlah Proporsi' w='98662' x='669' y='7583'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='41692' id='5' is-fixed='true' name='Nama Kabupaten Kota' w='49307' x='669' y='24948'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='41692' id='9' is-fixed='true' name='Tahun' w='49355' x='49976' y='24948'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='249' h='32096' id='8' is-fixed='true' name='Bentuk Usaha' w='25335' x='669' y='66640'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='249' h='32096' id='6' is-fixed='true' name='Kategori Usaha' w='73327' x='26004' y='66640'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{934EA15E-65BF-45E0-BC3B-36ABD16DF28F}' />
+    </dashboard>
+    <dashboard name='Story' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Swis721 BT' italic='true'>Data UMKM Jawa Barat</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97830' id='10' param='vert' removable='false' type='layout-flow' w='98828' x='586' y='1085'>
+            <zone h='5020' id='11' type='title' w='98828' x='586' y='1085'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92810' id='8' param='vert' removable='false' type='layout-flow' w='98828' x='586' y='6105'>
+              <zone h='92810' id='1' param='vert' removable='false' type='layout-flow' w='98828' x='586' y='6105'>
+                <zone h='10719' id='4' paired-zone-id='5' removable='false' type='flipboard-nav' w='98828' x='586' y='6105' />
+                <zone h='82091' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98828' x='586' y='16824'>
+                  <flipboard active-id='14' nav-type='arrowonly' show-nav-arrows='true'>
+                    <story-points>
+                      <story-point captured-sheet='' id='15' />
+                      <story-point caption='Bentuk Usaha apa yang memiliki Jumlah UMKM terbanyak?' captured-sheet='Bentuk Usaha' id='1' />
+                      <story-point caption='Perbandingan Bentuk Usaha di setiap Tahunnya.' captured-sheet='Bentuk Usaha (2)' id='3' />
+                      <story-point caption='Kesimpulan' captured-sheet='' id='4' />
+                      <story-point captured-sheet='Kategori Usaha' id='5' />
+                      <story-point captured-sheet='Kategori Usaha (2)' id='6' />
+                      <story-point captured-sheet='' id='9' />
+                      <story-point captured-sheet='Jenis Usaha' id='7' />
+                      <story-point captured-sheet='Jenis Usaha (2)' id='8' />
+                      <story-point captured-sheet='' id='10' />
+                      <story-point captured-sheet='Jumlah Proporsi' id='11' />
+                      <story-point captured-sheet='Nama Kabupaten Kota' id='12' />
+                      <story-point captured-sheet='Tahun' id='13' />
+                      <story-point captured-sheet='' id='14' />
+                    </story-points>
+                  </flipboard>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='52923' hidden='true' id='6' story-point-id='1' type='text' w='25368' x='8052' y='28752'>
+          <formatted-text>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Swis721 BT' fontsize='15'>Bentuk Usaha apa yang memiliki Jumlah UMKM terbanyak?</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run fontalignment='0' fontcolor='#000000dd' fontname='-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol' fontsize='12'>usaha berbentuk CV dominan memiliki jumlah UMKM terbanyak, dikarenakan pendiriannya yang lebih mudah dibandingkan PT, membuat CV banyak dipilih sebagai badan usaha untuk bisnis UMKM. Bentuk Usaha Perorangan dan PT berada di posisi kedua setelah bentuk usaha CV, dan Koperasi menenpati posisi paling akhir.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='80885' hidden='true' id='12' story-point-id='4' type='text' w='43264' x='28703' y='19431'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Swis721 BT'>Kesimpulan</run>
+            <run>Æ&#10;</run>
+            <run fontalignment='0'>Æ&#10;</run>
+            <run fontalignment='0' fontcolor='#000000dd' fontname='-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol' fontsize='11'>Hasil prediksi di Tahun 2021, diperkirakan Jumlah UMKM di usaha berbentuk CV menurun dari 3.994 usaha, menjadi 3.763, Bentuk Usaha PT dan Perorangan pun mengalami penurunan, sedangkan Usaha Berbentuk naik dari 5 jumlah UMKM menjadi 53 Jumlah UMKM.</run>
+            <run fontalignment='0'>Æ&#10;</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='28594' hidden='true' id='13' story-point-id='5' type='text' w='40260' x='22078' y='33649'>
+          <formatted-text>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Swis721 BT' fontsize='15'>Kategori Usaha manakah yang memiliki Jumlah UMKM terbanyak?</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontsize='10'>Kategori Usaha Makanan dan Kuliner, memiliki Jumlah UMKM terbanyak, dikarenakan, cukup rendah nya modal yang di butuhkan dibandingkan Kategori Usaha-usaha lainnya.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='27014' hidden='true' id='14' story-point-id='7' type='text' w='33333' x='52900' y='21169'>
+          <formatted-text>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Swis721 BT' fontsize='15'>Jenis Usaha manakah yang memiliki Jumlah UMKM terbanyak?</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontsize='10'>Dan lagi, jenis Usaha yang memiliki Jumlah UMKM tertinggi adalah Usaha Kuliner dan Makanan, Fashion menempati posisi ke-3 setelah Kuliner, dan Craft menempati posisi ke-4.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='77725' hidden='true' id='15' story-point-id='9' type='text' w='90377' x='4770' y='19747'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Swis721 BT' fontsize='15'>Kesimpulan</run>
+            <run>Æ&#10;</run>
+            <run fontalignment='0'>Æ&#10;</run>
+            <run fontalignment='0' fontcolor='#000000dd' fontname='-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol' fontsize='11'>Hasil prediksi di Tahun 2022, diperkirakan Kategori Usaha Makanan dan Kuliner dan lainnya, menurun, ini bisa disebabkan oleh adanya PSBB dan PPKM dibeberapa tempat di Jawa Barat yang saat ini membuat usaha mikro dan kecil terdesak. Banyak diantaranya yang terpaksa harus menutup usaha, karena terpaksa memakai modal usaha untuk konsumsi sehari-hari, menjadikan Usaha&quot; tersebut mengalami penurunan.</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run fontalignment='0' fontcolor='#000000dd' fontname='-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol' fontsize='11'>Tetapi, ada satu cara yang bisa dilakukan, dimana pandemi tidak menjadi halangan dan usaha justru berkembang sangat pesat. Caranya adalah berjualan secara online. Jika produk dapat memungkinkan untuk dijual secara online, ini adalah kesempatan besar. Hal ini dimungkinkan karena meningkatnya jumlah pengguna intenet di Indonesia secara pesat setiap tahun. Kini internet tidak hanya dinikmati oleh orang-orang kota, tapi sudah menjangkau ke desa-desa.</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run fontalignment='0' fontcolor='#000000dd' fontname='-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol' fontsize='11'>Tentu akan sangat disayangkan, jika internet hanya digunakan untuk sosial media seperti Facebook dan Instagram atau hanya dipakai untuk bermain game saja. Karena dengan berjualan produk secara online, UMKM dapat memasarkan produk dan jasanya lebih luas, lebih mudah, dan lebih murah.</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run fontalignment='0' fontcolor='#000000dd' fontname='-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol' fontsize='11'>Sedangkan Usaha Jasa dan Fashion ini meningkat, ini dikarenakan berjualan baju, celana dan semacamnya dapat dijual secara online, dan Jasa-jasa layanan pengiriman barang seperti JNE, JNT dll, yang dibutuhkan untuk pengiriman barang ataupun makanan.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='72986' hidden='true' id='16' story-point-id='10' type='text' w='48233' x='25788' y='21327'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Swis721 BT' fontsize='15'>Kesimpulan</run>
+            <run>Æ&#10;</run>
+            <run fontalignment='0'>Æ&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontsize='11'>Hasil prediksi di Tahun 2021, diperkirakan Jenis Usaha Makanan dan Kuliner akan meningkat lebih banyak dibanding Jenis Usaha Fashion, dikarenakan Usaha Makanan dan Kuliner ini, lebih dibutuhkan di saat-saat pandemi seperti ini.  </run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontsize='11'>Usaha Obat&quot;an, Aksesoris, Batik, Agribisnis dan Bordir memiliki penurunan drastis, karena Jenis Usaha tersebut tidak terlalu diperlukan atau di jual belikan secara luas dikarenakan PSBB dan PPKM di setiap wilayah. Hal ini dapat di minimalisir dengan berjualan maupun menawarkan jasa secara online di toko&quot; online seperti Tokopedia, Shopee, dan lainnya.</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontsize='11'>Sedangkan Jenis Usaha Makanan, Kuliner, dan Fashion dapat di jual secara online di saat-saat pandemi seperti ini, contohnya Usaha Makanan seperti Frozen Food, Usaha Kuliner Seperti Baso Aci, dan Fashion seperti Baju yang dapat di kirim melalui Jasa Pengiriman seperti Gojek dan Grab, ataupun jasa&quot; pengiriman lainnya.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='22275' hidden='true' id='17' story-point-id='11' type='text' w='35816' x='36569' y='31754'>
+          <formatted-text>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Swis721 BT' fontsize='15'>Berapakah Jumlah Proporsi Kredit di setiap Tahunnya?</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontsize='10'>Jumlah proporsi kredit tertinggi berada di Tahun 2019, dan di tahun 2020, Jumlah Proporsi Kredit ini menurun, dan hasil Forecasting juga menunjukan hal yang sama.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='19115' hidden='true' id='18' story-point-id='12' type='text' w='44184' x='54728' y='1580'>
+          <formatted-text>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Swis721 BT' fontsize='12'>Kabupaten atau Kota manakan yang memiliki Jumlah</run>
+            <run bold='true' fontalignment='0' fontcolor='#f28e2b' fontname='Swis721 BT' fontsize='12'>Æ </run>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Swis721 BT' fontsize='12'>UMKM terbanyak?</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontsize='10'>Kabupaten Bogor menempati posisi pertama dengan Jumlah UMKM terbanyak dengan Jumlah UMKM mencapai 3.118.107 juta unit, dan disusul Oleh Kabupaten Bandung dengan Jumlah UMKM sebanyak 2.932.411 unit.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='33491' hidden='true' id='19' story-point-id='13' type='text' w='21841' x='12301' y='19747'>
+          <formatted-text>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Swis721 BT' fontsize='10'>Tahun dan Kategori Usaha apakah yang memiliki Jumlah UMKM terbanyak?</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontsize='8'>Kategori Usaha Kuliner menempati posisi pertama dan Kategori Usaha Makanan menempati posisi kedua setiap tahunnya, dan terus meningkat sampai Tahun 2021, tetapi hasil prediksi menyatakan, bahwa tahun 2022 ini semua Kategori Usaha akan mengalami penurunan yang lumayan besar.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='74250' id='20' story-point-id='14' type='text' w='48233' x='25883' y='21485'>
+          <formatted-text>
+            <run bold='true' fontalignment='0' fontcolor='#ff0000' fontname='Swis721 BT' fontsize='15' underline='true'>SAATNYA BERANI BERJUALAN DI INTERNET</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontsize='10'>Dengan berjualan di internet, UMKM dapat memasarkan produk dan jasanya lebih luas, lebih mudah, dan lebih murah. Sebuah penelitian dari lembaga internasional terkemuka, mengatakan, perdagangan menggunakan sarana digital juga akan meningkatkan biaya di pulau Jawa 4 persen hingga 25 persen. </run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontsize='10'>Sedangkan di luar Pula Jawa akan menghemat 11 hingga 25 persen. Sayangnya saat ini baru 21 persen atau 1 dari 5 UMKM terdaftar, yang sudah memanfaatkan penjualan online. Padahal pemanfaatan teknologi digital adalah salah satu jalan agar UMKM dapat bertahan pada situasi sulit seperti saat ini. Selain itu, pada masa mendatang tren ekonomi lewat HP dan laptop ini diperkirakan akan terus naik.</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontsize='10'>Sejarah mencatat dalam kondisi sulit, usaha kecil dan menegah kerap mampu menjadi penyelamat perekonomian nasional, karena memang ekonomi indonesia masih bertumpu pada sektor UMKM. Dengan memanfaatkan teknologi digital, banyak UMKM yang bertahan dan berkembang. hal ini tent akan berdampak pada penyerapan tenaga kerja dan mengurangi tingkat pengangguran. Hingga pada akhirnya hal ini akan memberikan dampak positif pada perekonomian negara.</run>
+            <run fontalignment='0'>Æ&#10;&#10;&#10;</run>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Swis721 BT' fontsize='10' italic='true'>UMKM digital adalah kunci pemulihan ekonomi nasional.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='4739' hidden='true' id='21' story-point-id='3' type='text' w='48745' x='45974' y='57346'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Swis721 BT' fontsize='15'>Perbandingan Bentuk Usaha di setiap Tahunnya.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='10269' hidden='true' id='22' story-point-id='6' type='text' w='12803' x='77824' y='9005'>
+          <formatted-text>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Swis721 BT' fontsize='8'>Perbandingan Kategori Usaha di setiap Tahunnya.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='19905' hidden='true' id='23' story-point-id='8' type='text' w='19102' x='30086' y='34123'>
+          <formatted-text>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Swis721 BT' fontsize='15'>Perbandingan Jenis Usaha di setiap Tahunnya.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' h='24171' hidden='true' id='24' story-point-id='15' type='text' w='33333' x='34978' y='45656'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontsize='28'>UMKM digital adalah Kunci Pemulihan Ekonomi Nasional</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid='{355A6D28-B09F-419F-A8FE-D3927567D4D4}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='54'>
+    <window class='worksheet' name='Jenis Usaha' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{BEDE98EE-38AB-4DD9-8479-75828F8E550D}' />
+    </window>
+    <window class='worksheet' name='Jenis Usaha (2)' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{9627F20A-B459-4EC4-868E-4141EBB598FA}' />
+    </window>
+    <window class='worksheet' name='Tahun' tab-color='#f66273'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <floating-toolbar-visibility value='1' />
+      </viewpoint>
+      <simple-id uuid='{13387E21-B99F-4E67-A177-AB6C8F72CB00}' />
+    </window>
+    <window class='worksheet' name='Nama Kabupaten Kota' tab-color='#dec77b'>
+      <cards>
+        <edge name='left'>
+          <strip size='100'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{D9A05161-8676-409B-954E-FE4A32D04945}' />
+    </window>
+    <window class='worksheet' name='Kategori Usaha' tab-color='#a65200'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{87E5001E-FA05-4F60-98B6-720F66E2AA95}' />
+    </window>
+    <window class='worksheet' name='Kategori Usaha (2)' tab-color='#a65200'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{59086674-5D74-4D9C-9512-A0B5D80F0B42}' />
+    </window>
+    <window class='worksheet' name='Jumlah Proporsi' tab-color='#17927d'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0rg6thb1fnigwi16ckv290cggoke].[fVal:sum:id,jumlah_proporsi,satuan,tahun - Split 2:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{2343A689-CD38-4901-87F8-993F83F88F10}' />
+    </window>
+    <window class='worksheet' name='Bentuk Usaha' tab-color='#72bcbb'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{3BD197A9-7B89-4DC1-A554-43E6A8C75C43}' />
+    </window>
+    <window class='worksheet' name='Bentuk Usaha (2)' tab-color='#72bcbb'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{586B4ED7-9810-4417-B8D8-78B329E6A579}' />
+    </window>
+    <window class='dashboard' name='Dashboard' tab-color='#dec77b'>
+      <viewpoints>
+        <viewpoint name='Bentuk Usaha'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Jumlah Proporsi'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Kategori Usaha'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Nama Kabupaten Kota'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Tahun'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='22' />
+      <simple-id uuid='{8375EF4D-C21A-4FA7-8E0C-2A1A8232201A}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Story' tab-color='#6e597f'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{49BC251F-07F0-41DC-8166-9A8EF7E39117}' />
+    </window>
+  </windows>
+</workbook>
